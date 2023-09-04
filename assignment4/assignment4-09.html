@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Object Manipulation | 21MIC7182</title>
+    </head>
+
+    <body>
+        <form id="form">
+            <input type="text" id="name" placeholder="Enter name" required> <br>
+            <input type="number" id="age" placeholder="Enter age" required> <br>
+            <input type="submit" value="Add"> <br>
+        </form>
+
+        <button type="button" onclick="sortRecords()">Sort</button>
+
+        <p id="input"></p>
+        <p id="result"></p>
+
+        <script>
+
+            students = [];
+            form = document.getElementById("form");
+            input = document.getElementById("input");
+            result = document.getElementById("result");
+            studentName = document.getElementById("name");
+            studentAge = document.getElementById("age");
+            br = document.createElement("br");
+
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
+                add = true;
+
+                sName = studentName.value;
+                sAge = studentAge.value;
+
+                for(var i = 0; i < students.length; i++) {
+                    if(sName === students[i].name) {
+                        add = false;
+                        break;
+                    }
+                }
+
+                if(!add) {
+                    alert("student already present");
+                }
+                else {
+                    obj = {
+                        'name' : sName,
+                        'age' : sAge
+                    };
+
+                    students.push(obj);
+
+                    showStudentRecords(input, students, "Input records");
+                }
+            });
+
+            function showStudentRecords(input, students, str) {
+                input.innerHTML = `<b>${str}</b><br>`;
+                
+                for(var i = 0; i < students.length; i++) {
+                    input.innerHTML += `${students[i].name} -- ${students[i].age}`;
+                    input.append(br);
+                }
+            }
+
+            function sortRecords() {
+                const sortStudent = students.sort(compareAge);
+
+                console.log(sortStudent);
+                showStudentRecords(result, students, "Sorted records");
+            }
+
+
+            function compareAge(a, b) {
+
+                return a.age - b.age;
+            }
+
+        </script>
+    </body>
+</html>

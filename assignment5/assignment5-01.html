@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Click count</title>
+        <style>
+            button {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <p id="result">0</p>
+        <button id="cnt">Click</button>
+        <button id="re">Reset</button>
+
+        <script>
+            var c = 0;
+            cnt = document.getElementById("cnt");
+            re = document.getElementById("re");
+
+            cnt.addEventListener('click', () => {
+                c = c + 1;
+                document.getElementById("result").innerText = c;
+            });
+
+            re.onclick = () => {
+                c = 0;
+                document.getElementById("result").innerText = c;
+            }
+        </script>
+    </body>
+</html>

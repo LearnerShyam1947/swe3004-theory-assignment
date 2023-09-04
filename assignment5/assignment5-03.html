@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Validation | 21MIC7182</title>
+
+        <style>
+            body {
+                display: grid;
+                place-items: center;
+                height: 100vh;
+            }
+
+            form {
+                width: 500px;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+
+            }
+            .error {
+                border-color: red;
+                border-style: solid;
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            input {
+                outline: none;
+                width: 100%;
+                height: 30px;
+                margin-top: 10px;
+                font-size: 18px;
+                padding-left: 10px;
+            }
+
+            input[type=submit] {
+                width: 102%;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form id="form" action="index.html">
+            <h1>Login</h1>
+            <input placeholder="Enter your email" type="email" id="email"> 
+            <label id="emailError"></label><br>
+
+            <input placeholder="Enter your password" type="password" id="password">
+            <label id="passwordError"></label><br>
+
+            <input type="submit" value="Submit">
+        </form>
+
+        <script>
+            form = document.getElementById("form");
+            email = document.getElementById("email");
+            emailError = document.getElementById("emailError");
+            password = document.getElementById("password");
+            passwordError = document.getElementById("passwordError");
+
+            
+            form.addEventListener("submit", (e) => {
+                email.classList.remove("error");
+                password.classList.remove("error");
+                emailError.innerHTML = '';
+                passwordError.innerHTML = '';
+
+                e.preventDefault();
+                emailValue = email.value.trim();
+                passwordValue = password.value.trim();
+                if(emailValue === '') {
+                    email.classList.add("error");
+                    emailError.innerHTML = 'Enter email';
+                }
+                
+                if(passwordValue === '') {
+                    password.classList.add("error");
+                    passwordError.innerHTML = 'Enter password';
+                }
+
+                else if(emailValue === 'test@gmail.com' && passwordValue === 'password') {
+                    alert("success");
+                    return true;
+                }
+                else {
+                    email.classList.add("error");
+                    password.classList.add("error");
+                    emailError.innerHTML = 'invalid email or password';
+                    passwordError.innerHTML = 'invalid email or password';
+                }
+            });
+        </script>
+    </body>
+</html>

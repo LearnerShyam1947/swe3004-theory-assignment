@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Object Key Value Count | 21MIC7182</title>
+    </head>
+
+    <body>
+        <button id="btn">START</button>
+        <p id="result"></p>
+        <script>
+
+            btn = document.getElementById("btn");
+            result = document.getElementById("result");
+            result.innerHTML = '';
+
+            list = [];
+
+            btn.onclick = () => {
+                do {
+                    t = prompt("Enter a string : ");
+                    if(t !== null && t !== "") {
+                        list.push(t);
+                    }
+
+                }while(t !== null);
+                getOutput(list);
+            }
+
+            function getOutput(list) {
+                
+                var obj = {};
+
+                for(var i = 0; i < list.length; i++) {
+                    if(obj[list[i]]) {
+                        obj[list[i]] = obj[list[i]] + 1;
+                    }
+                    else {
+                        obj[list[i]] = 1;
+                    }
+                }
+
+                lStr = list.toString();
+
+                vs = Object.values(obj);
+                ks = Object.keys(obj);
+                
+                br = document.createElement('br');
+                
+                result.innerHTML = `Given array : <b>${lStr}</b>`;
+                result.append(br);
+                
+                for(var i = 0; i < vs.length; i++) {
+                    result.innerHTML += `${ks[i]} -- ${vs[i]}`;
+                    result.append(br);
+                }
+            }
+        </script>
+    </body>
+</html>

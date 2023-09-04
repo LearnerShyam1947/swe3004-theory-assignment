@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment04 | 21MIC7182</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+
+        .names label {
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        .img-con {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width:800px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header img {
+                margin-top: 40px;
+            }
+        }
+
+        main ul {
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80vw;
+            margin: 0 auto;
+        }
+
+        table th {
+            background: black;
+            color: white;
+            border-right: 1px white solid;
+        }
+
+        table th:last-child {
+            border-right: 1px black solid;
+        }
+
+        th,
+        td {
+            border: 1px black solid;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="names">
+            <label>NAME : KARNAM SHYAM</label> <br> 
+            <label>REGISTRATION NUMBER : 21MIC7182</label> <br>
+            <label>COURSE CODE : SWE3004(FDAT)</label> <br>
+            <label>SLOT : A2 + TA2</label>
+        </div>
+        <div class="img-con">
+            <img src="https://res.cloudinary.com/ddm2qblsr/image/upload/v1661768551/shyam_thm2tn.jpg" alt="my_image">
+        </div>
+    </header>
+
+    <h1>Practice Set - 3 : JavaScript</h1>
+    <table>
+        <tr>
+            <th>S. NO.</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>Counting Vowels</td>
+            <td>Write a JavaScript function that takes a string as input and returns the count of vowels (a, e, i, o, u) in the string.</td>
+            <td><a target="_blank" href="assignment4-01.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Array Sum and Average</td>
+            <td>Write a function that takes an array of numbers as input and returns the sum and average of the numbers.</td>
+            <td><a target="_blank" href="assignment4-02.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Find Maximum Element</td>
+            <td>Create a function to find the maximum element in an array of numbers.</td>
+            <td><a target="_blank" href="assignment4-03.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Reverse String </td>
+            <td>Implement a function that reverses a given string without using the built-in reverse() function. </td>
+            <td><a target="_blank" href="assignment4-04.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Object Key-Value Count</td>
+            <td>Write a JavaScript program to count the number of occurrences of each key in an object.</td>
+            <td><a target="_blank" href="assignment4-05.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Unique Values in an Array</td>
+            <td>Create a function that returns an array with unique values from a given array, removing duplicates.</td>
+            <td><a target="_blank" href="assignment4-06.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Prime Number Checker </td>
+            <td>Develop a function that checks whether a given number is a prime number. </td>
+            <td><a target="_blank" href="assignment4-07.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td> Array Filtering </td>
+            <td>Write a program to filter out even numbers from an array of integers and return a new array with only the odd numbers.</td>
+            <td><a target="_blank" href="assignment4-08.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>Object Manipulation</td>
+            <td>Create a program that takes an array of objects with 'name' and 'age' properties and sorts them based on age in ascending order. </td>
+            <td><a target="_blank" href="assignment4-09.html">click here</a></td>
+        </tr>
+       
+        <tr>
+            <td>10</td>
+            <td>String Capitalization </td>
+            <td>Write a program to capitalize the first letter of each word in a given sentence. </td>
+            <td><a target="_blank" href="assignment4-10.html">click here</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>

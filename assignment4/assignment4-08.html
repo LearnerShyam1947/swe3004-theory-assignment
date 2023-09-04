@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array Filtering | 21MIC7182</title>
+    </head>
+
+    <body>
+        <div class="main">
+            <p>Click start button and enter the number and cancel to stop entering numbers</p>
+            <button id="start">START</button>
+            <p id="result"></p>
+        </div>
+        <script>
+            resultDiv = document.getElementById("result");
+            startBtn = document.getElementById("start");
+
+            startBtn.onclick = () => {
+                arr = [];
+                sum = 0;
+
+                do {
+                    t = prompt('Enter : ', 0);
+                    if(t !== null) {
+                        arr.push(+t);
+                    }
+
+                }while(t !== null)
+                oddArr = [];
+
+                for(var i = 0; i< arr.length; i++) {
+                    if(arr[i] % 2 !== 0) {
+                        oddArr.push(arr[i]);
+                    }
+                }
+                arrStr = arr.toString();
+                oddStr = oddArr.toString();
+
+                result.innerHTML = `Given array is ${arrStr} <br>
+                                    Odd array is <b>${oddArr}</b> <br>`;
+            }
+
+        </script>
+    </body>
+</html>

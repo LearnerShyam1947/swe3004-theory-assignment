@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter | 21MIC7182</title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            text-align: center;
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        button {
+            background-color: green;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: 700;
+            opacity: 0.8;
+            transition: all 0.5s;
+            letter-spacing: 1.5px;
+        }
+        
+        button:hover {
+            opacity: 1;
+        }
+        
+        button:active {
+            letter-spacing: 2.5px;
+        }
+
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vowel Counter</h1>
+        <input type="text" id="inputString" placeholder="Enter a string...">
+        <button id="btn" onclick="countVowels()">Count Vowels</button>
+        <p id="result"></p>
+    </div>
+    <script >
+        const btn = document.getElementById('btn');
+        
+        btn.onclick = () => {
+            countVowels();
+        }
+        
+        function countVowels() {
+            const inputString = document.getElementById('inputString').value;
+
+            vowelCount = 0;
+
+            for(var i = 0; i < inputString.length; i++) {
+                if(inputString[i].toLowerCase() === 'a') {
+                    vowelCount = vowelCount + 1;
+                }
+                if(inputString[i].toLowerCase() === 'e') {
+                    vowelCount = vowelCount + 1;
+                }
+                if(inputString[i].toLowerCase() === 'i') {
+                    vowelCount = vowelCount + 1;
+                }
+                if(inputString[i].toLowerCase() === 'o') {
+                    vowelCount = vowelCount + 1;
+                }
+                if(inputString[i].toLowerCase() === 'u') {
+                    vowelCount = vowelCount + 1;
+                }
+            }
+            document.getElementById('result').textContent = `Number of vowels: ${vowelCount}`;
+            document.getElementById('inputString').value = '';
+        }   
+        
+    </script>
+</body>
+</html>

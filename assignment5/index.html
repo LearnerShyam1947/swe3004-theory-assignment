@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment05 | 21MIC7182</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+
+        .names label {
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        .img-con {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width:800px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header img {
+                margin-top: 40px;
+            }
+        }
+
+        main ul {
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80vw;
+            margin: 0 auto;
+        }
+
+        table th {
+            background: black;
+            color: white;
+            border-right: 1px white solid;
+        }
+
+        table th:last-child {
+            border-right: 1px black solid;
+        }
+
+        th,
+        td {
+            border: 1px black solid;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        td {
+            max-width: 700px;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        table {
+            margin-bottom: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="names">
+            <label>NAME : KARNAM SHYAM</label> <br> 
+            <label>REGISTRATION NUMBER : 21MIC7182</label> <br>
+            <label>COURSE CODE : SWE3004(FDAT)</label> <br>
+            <label>SLOT : A2 + TA2</label>
+        </div>
+        <div class="img-con">
+            <img src="https://res.cloudinary.com/ddm2qblsr/image/upload/v1661768551/shyam_thm2tn.jpg" alt="my_image">
+        </div>
+    </header>
+
+    <h1>Practice Set - 5 : Event Handler</h1>
+    <table>
+        <tr>
+            <th>S. NO.</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>Button Click Counter</td>
+            <td>Create a webpage with a button and a counter. Each time the button is clicked, increment the counter and update the display.</td>
+            <td><a target="_blank" href="assignment4-01.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Mouse Hover Effects</td>
+            <td>Design a set of images that change when the mouse hovers over them. Use event listeners to achieve this effect.</td>
+            <td><a target="_blank" href="assignment4-02.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Form Validation</td>
+            <td>Build a form with input fields for name, email, and password. Validate the form using JavaScript to ensure all fields are filled out correctly before submission.</td>
+            <td><a target="_blank" href="assignment4-03.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Toggle Password Visibility</td>
+            <td>Create a password input field with a toggle button. When the button is clicked, change the input type from password to text, and vice versa.</td>
+            <td><a target="_blank" href="assignment4-04.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Key Press Game</td>
+            <td>Develop a game where users have to press a specific key within a certain time limit. Display success or failure messages based on the user's performance.</td>
+            <td><a target="_blank" href="assignment4-05.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>6</td>
+            <td>Image Slider</td>
+            <td>Build an image slider that displays a set of images and allows users to navigate through them using previous and next buttons. </td>
+            <td><a target="_blank" href="assignment4-06.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>7</td>
+            <td>Modal Popup</td>
+            <td>Design a button that triggers a modal popup when clicked. The modal should display additional information or content.</td>
+            <td><a target="_blank" href="assignment4-07.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>8</td>
+            <td>Dropdown Menu</td>
+            <td>Create a navigation menu with dropdown submenus. Use event listeners to show/hide the submenus </td>
+            <td><a target="_blank" href="assignment4-08.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>9</td>
+            <td>Drag and Drop</td>
+            <td>Implement a drag-and-drop functionality where users can drag elements and drop them into specific target areas.</td>
+            <td><a target="_blank" href="assignment4-09.html">click here</a></td>
+        </tr>
+       
+        <tr>
+            <td>10</td>
+            <td>Color Change Game</td>
+            <td>Create a game where users have to click on different colored elements within a time limit. Change the color of the elements randomly and challenge users to click the correct ones.</td>
+            <td><a target="_blank" href="assignment4-10.html">click here</a></td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Scroll Animation</td>
+            <td>Design a webpage with sections and a navigation menu. Use JavaScript to create smooth scrolling animations when users click on the menu links. </td>
+            <td><a target="_blank" href="assignment4-11.html">click here</a></td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td> Resizable Textarea</td>
+            <td>Build a textarea that automatically adjusts its height as users type or delete text.</td>
+            <td><a target="_blank" href="assignment4-12.html">click here</a></td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td> Autocomplete Suggestions</td>
+            <td>Develop an input field with autocomplete suggestions based on a predefined list of options.</td>
+            <td><a target="_blank" href="assignment4-13.html">click here</a></td>
+        </tr>
+        <tr>
+            <td>14</td>
+            <td>Context Menu</td>
+            <td>Implement a custom context menu that appears when users right-click on a specific element.</td>
+            <td><a target="_blank" href="assignment4-14.html">click here</a></td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Tabbed Content</td>
+            <td>Create tabbed content sections where users can click on tabs to switch between different sets of content. </td>
+            <td><a target="_blank" href="assignment4-15.html">click here</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>

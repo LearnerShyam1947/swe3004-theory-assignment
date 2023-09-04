@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Adjusting Textarea | 21MIC7182</title>
+    <style>
+        *{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+        body {
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .textarea-container {
+            width: 80%;
+        }
+
+        textarea {
+            outline: 0;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #1d1d1d;
+            resize: none;
+            min-height: 50px;
+            overflow: hidden;
+        }
+
+        textarea:focus {
+            border: 1px solid #383838;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Resize able text area</h1>
+    <div class="textarea-container">
+        <textarea id="autoTextarea" placeholder="Type or delete text..."></textarea>
+    </div>
+    <script>
+        const textarea = document.getElementById("autoTextarea");
+
+        textarea.addEventListener("input", function () {
+            this.style.height = "auto";
+            this.style.height = this.scrollHeight + "px";
+        });
+
+        // Initialize the textarea's height
+        textarea.style.height = "auto";
+        textarea.style.height = textarea.scrollHeight + "px";
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Hover Effect | 21MIC7182</title>
+    <style>
+        .image-container {
+            display: flex;
+        }
+
+        .hover-image {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hover-image:hover {
+            transform: scale(1.1);
+            /* Zoom in effect on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="images/1.jpg" alt="Image 1" class="hover-image">
+        <img src="images/2.jpg" alt="Image 2" class="hover-image">
+        <img src="images/3.jpg" alt="Image 3" class="hover-image">
+    </div>
+    
+</body>
+
+</html>

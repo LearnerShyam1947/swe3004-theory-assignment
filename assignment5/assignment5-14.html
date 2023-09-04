@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>context menu | 21MIC7182</title>
+
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            #box {
+                display: grid;
+                place-items: center;
+                margin: 100px auto 0 auto;
+                height: 400px;
+                width: 400px;
+                border: 2px solid black;
+                padding: 0 30px;
+            }
+
+            #custom-menu {
+                position: absolute;
+                height: min-content;
+                width: 150px;
+                background: black;
+                color: white;
+                padding-top: 10px;
+            }
+
+            ul li {
+                width: 100%;
+                padding: 10px;
+                transition: all 0.3s;
+                margin-bottom: 20px;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                text-transform: capitalize;
+            }
+
+            ul li:hover {
+                background: rgba(128, 128, 128, 0.494);
+                padding-left: 25px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="box">
+            <h3>Right click inside the box for custom menu</h3>
+        </div>
+        <div id="custom-menu">
+            <ul>
+                <li><a href="#">link-1</a></li>
+                <li><a href="#">link-2</a></li>
+                <li><a href="#">link-3</a></li>
+                <li><a href="#">link-4</a></li>
+            </ul>
+        </div>
+        <script>
+            box = document.getElementById("box");
+            customMenu = document.getElementById("custom-menu");
+            customMenu.style.display = 'none';
+
+            box.addEventListener('contextmenu', (e) => {
+                e.preventDefault();
+                showCustomMenu(e.clientX, e.clientY);
+            });
+
+            function showCustomMenu(x, y) {
+                customMenu.style.display = 'block';
+                customMenu.style.top = y + 'px';
+                customMenu.style.left = x + 'px';
+            }
+
+            document.addEventListener('click', () => {
+                customMenu.style.display = 'none';
+            });
+        </script>
+    </body>
+</html>

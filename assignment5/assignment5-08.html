@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu li {
+            position: relative;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            display: block;
+        }
+
+        .has-submenu:hover .submenu {
+            display: block;
+        }
+
+        .submenu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 180px;
+            background-color: #333;
+        }
+
+        .submenu li {
+            display: block;
+            padding: 10px;
+            transition: padding 0.3s;
+        }
+
+        /* Additional styling for aesthetics */
+        .menu li:hover {
+            background-color: #555;
+            
+        }
+        
+        .submenu li:hover {
+            background-color: #555;
+            padding-left: 20px;
+            border-left: #ff9900 5px solid;
+        }
+
+        .menu li:hover a {
+            color: #ff9900;
+        }
+    </style>
+    <title>Navigation Menu | 21MIC7182</title>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li class="has-submenu">
+                <a href="#">Services</a>
+                <ul class="submenu">
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Graphic Design</a></li>
+                    <li><a href="#">Digital Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Portfolio</a></li>
+            <li class="has-submenu">
+                <a href="#">Contact</a>
+                <ul class="submenu">
+                    <li><a href="#">Email Us</a></li>
+                    <li><a href="#">Call Us</a></li>
+                    <li><a href="#">Visit Us</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>

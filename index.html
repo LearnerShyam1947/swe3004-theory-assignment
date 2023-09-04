@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment03 | 21MIC7182</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        header {
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+
+        .names label {
+            font-size: 25px;
+            letter-spacing: 2px;
+        }
+
+        .img-con {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (max-width:800px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            header img {
+                margin-top: 40px;
+            }
+        }
+
+        main ul {
+            list-style: none;
+        }
+
+        li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80vw;
+            margin: 0 auto;
+        }
+
+        table th {
+            background: black;
+            color: white;
+            border-right: 1px white solid;
+        }
+
+        table th:last-child {
+            border-right: 1px black solid;
+        }
+
+        th,
+        td {
+            border: 1px black solid;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="names">
+            <label>NAME : KARNAM SHYAM</label> <br> 
+            <label>REGISTRATION NUMBER : 21MIC7182</label> <br>
+            <label>COURSE CODE : SWE3004(FDAT)</label> <br>
+            <label>SLOT : A2 + TA2</label>
+        </div>
+        <div class="img-con">
+            <img src="https://res.cloudinary.com/ddm2qblsr/image/upload/v1661768551/shyam_thm2tn.jpg" alt="my_image">
+        </div>
+    </header>
+
+    <h1>Theory Assignments</h1>
+    <table>
+        <tr>
+            <th>S. NO.</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>Practice Set - 1</td>
+            <td>Information Not available</td>
+            <td> - </td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Practice Set - 2</td>
+            <td>News Paper Layout</td>
+            <td>coming soon..</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Practice Set - 3</td>
+            <td>Transform</td>
+            <td>coming soon..</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Practice Set - 4</td>
+            <td>JavaScript</td>
+            <td><a href="assignment4/index.html">click here</a></td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Practice Set - 5</td>
+            <td>Event Handlers</td>
+            <td><a href="assignment5/index.html">click here</a></td>
+        </tr>
+    </table>
+</body>
+
+</html>

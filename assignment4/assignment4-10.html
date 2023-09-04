@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String Capitalize | 21MIC7182</title>
+    </head>
+
+    <body>
+        <input type="text" id="strInput" placeholder="Enter a sentence">
+        <button id="send">Convert</button>
+        <p id="result"></p>
+        <script>
+            send = document.getElementById("send");
+            result = document.getElementById("result");
+            strInput = document.getElementById("strInput");
+
+            strInput.addEventListener('keyup', (e) => {
+                if(e.keyCode === 13) {
+                    capitalize();
+                }
+            });
+
+            send.onclick = () => {
+                capitalize();
+            }
+
+            function capitalize() {
+                stringVal = strInput.value;
+                strInput.value = "";
+                
+                words = stringVal.split(" ");
+                for(var i = 0;i < words.length;i++) {
+                    words[i] = words[i][0].toUpperCase() + words[i].substr(1);
+                }
+                reqStr = words.join(" ");
+
+                result.innerHTML = `Given sentence : ${stringVal} <br>
+                                    capitalized sentence : <b>${reqStr}</b>`;
+            }
+        </script>
+    </body>
+</html>

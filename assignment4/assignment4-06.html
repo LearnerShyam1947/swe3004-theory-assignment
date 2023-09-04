@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unique array | 21MIC7182</title>
+    </head>
+
+    <body>
+        <div class="main">
+            <p>Click start button and enter the number and cancel to stop entering numbers</p>
+            <button id="start">START</button>
+            <p id="result"></p>
+        </div>
+        <script>
+            resultDiv = document.getElementById("result");
+            startBtn = document.getElementById("start");
+
+            startBtn.onclick = () => {
+                arr = [];
+                sum = 0;
+
+                do {
+                    t = prompt('Enter : ', 0);
+                    if(t !== null) {
+                        arr.push(+t);
+                    }
+
+                }while(t !== null)
+
+                uniqueArr = [...new Set(arr)];
+
+                arrStr = arr.toString();
+
+                result.innerHTML = `Given array is ${arrStr} <br>
+                                    Unique array is <b>${uniqueArr}</b> <br>`;
+            }
+
+        </script>
+    </body>
+</html>

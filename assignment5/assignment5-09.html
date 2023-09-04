@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+        
+        .drag-element {
+            width: 100px;
+            height: 50px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+            cursor: grab;
+        }
+        
+        .target {
+            width: 150px;
+            height: 100px;
+            border: 2px dashed #ccc;
+            text-align: center;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+    </style>
+    <title>Drag and Drop | 21MIC7182</title>
+</head>
+<body>
+    <div class="container">
+        <div class="drag-element" draggable="true">Drag me</div>
+        <div class="target" id="target1" ondragover="allowDrop(event)" ondrop="drop(event)">Drop here</div>
+        <div class="target" id="target2" ondragover="allowDrop(event)" ondrop="drop(event)">Drop here</div>
+    </div>
+    <script>
+        // Function to allow dropping on target areas
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+// Function to handle the drop event
+function drop(event) {
+    event.preventDefault();
+    const data = event.dataTransfer.getData("text");
+    const target = event.target;
+    
+    // Append the dragged element to the target area
+    target.appendChild(document.getElementById(data));
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const dragElements = document.querySelectorAll(".drag-element");
+
+    // Add a dragstart event listener to each drag element
+    dragElements.forEach((element) => {
+        element.addEventListener("dragstart", (event) => {
+            event.dataTransfer.setData("text", event.target.id);
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

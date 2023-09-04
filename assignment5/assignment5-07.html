@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Model Popup | 21MIC7182</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            body {
+                display: grid;
+                place-items: center;
+                height: 100vh;
+            }
+
+            #btn {
+                padding: 8px 15px;
+                font-size: 20px;
+                text-transform: capitalize;
+                cursor: pointer;
+            }
+
+            .popup {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.499);
+            }
+
+            .popup-content {
+                position: absolute;
+                top: -150%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 400px;
+                height: 400px;
+                background: white;
+                transition: all 0.5s;
+
+            }
+
+            .content {
+                display: grid;
+                place-items: center;
+                height: 100%;
+                font-size: 22px;
+                font-weight: bold;
+            }
+
+            .popup-content.active {
+                top: 50%;
+            }
+
+            #close-btn {
+                position: absolute;
+                font-size: 30px;
+                top: 10px;
+                right: 10px;
+                cursor: pointer;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <button id="btn">click me</button>
+
+        <div class="popup"></div>
+
+        <div class="popup-content">
+            <div id="close-btn">&times;</div>
+            <div class="content">
+                <p>Popup content will go here.......</p>
+            </div>
+        </div>
+
+        <script>
+            popup = document.querySelector('.popup');
+            popupContent = document.querySelector('.popup-content');
+
+            popup.style.display = 'none';
+            popupContent.classList.remove('active');
+
+            btn = document.getElementById("btn");
+            btn.onclick = () => {
+                popup.style.display = 'block';
+                popupContent.classList.add('active');
+            };
+
+            closeBtn = document.getElementById("close-btn");
+            closeBtn.onclick = () => {
+                popup.style.display = 'none';
+                popupContent.classList.remove('active');
+            }
+        </script>
+    </body>
+</html>

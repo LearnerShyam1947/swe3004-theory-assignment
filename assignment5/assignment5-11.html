@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scrolling Webpage | 21MIC7182</title>
+    <style>
+        /* Basic styling for the page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Styling for the navigation menu */
+        #navbar {
+            background-color: #333;
+            overflow: hidden;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        /* Styling for sections */
+        .section {
+            height: 100vh;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        /* Add more styling to individual sections as needed */
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Menu -->
+    <div id="navbar">
+        <a href="#section1">Section 1</a>
+        <a href="#section2">Section 2</a>
+        <a href="#section3">Section 3</a>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section" id="section1">
+        <h1>Section 1</h1>
+        <p>This is the first section of the webpage.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section" id="section2">
+        <h1>Section 2</h1>
+        <p>This is the second section of the webpage.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section" id="section3">
+        <h1>Section 3</h1>
+        <p>This is the third section of the webpage.</p>
+    </div>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        // Smooth scrolling when clicking on navigation links
+        document.querySelectorAll('#navbar a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

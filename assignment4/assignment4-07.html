@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prime Checker | 21MIC7182</title>
+        <style>
+            * {
+                font-family: Arial, sans-serif;
+            }
+            
+            body {
+                text-align: center;
+                display: grid;
+                place-items: center;
+                height: 100vh;
+            }
+    
+            .container {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f0f0f0;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            }
+            
+            input {
+                width: 80%;
+                padding: 10px;
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+            
+            button {
+                background-color: green;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                cursor: pointer;
+                font-size: 20px;
+                font-weight: 700;
+                opacity: 0.8;
+                transition: all 0.5s;
+                letter-spacing: 1.5px;
+            }
+            
+            button:hover {
+                opacity: 1;
+            }
+            
+            button:active {
+                letter-spacing: 2.5px;
+            }
+    
+            p {
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Prime Checker</h1>
+            <input type="number" id="numInput" placeholder="Enter a number ">
+            <button id="send">Prime Checker</button>
+            <p id="result"></p>
+        </div>
+        <script>
+            numInput = document.getElementById("numInput");
+            send = document.getElementById("send");
+
+            numInput.addEventListener('keyup', (e) => {
+                if(e.keyCode === 13) {
+                    checkPrime();
+                }
+            });
+
+            send.onclick = () => {
+                checkPrime();
+            }
+
+            function checkPrime() {
+                num = numInput.value;
+                cnt = 0;
+
+                for(var i = 1; i < num+1;i++) {
+                    if(num % i === 0) {
+                        cnt = cnt + 1;
+                    }
+                }
+
+                if(cnt === 2) {
+                    result.innerHTML = `${num} is prime`;
+                }
+                else {
+                    result.innerHTML = `${num} is not prime`;
+                }
+            }
+
+        </script>
+    </body>
+</html>
